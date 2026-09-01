@@ -7,174 +7,247 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- 헤더 -->
-        <header class="header">
-            <nav class="navbar">
+    <div class="main-container">
+        <!-- 네비게이션 -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="#" class="logo">이강란</a>
                 <ul class="nav-menu">
-                    <li><a href="#home">홈</a></li>
-                    <li><a href="#about">경력</a></li>
+                    <li><a href="#about">소개</a></li>
                     <li><a href="#expertise">전문성</a></li>
-                    <li><a href="#interests">관심분야</a></li>
+                    <li><a href="#career">경력</a></li>
+                    <li><a href="#contact">연락</a></li>
                 </ul>
-            </nav>
-        </header>
-
-        <!-- 메인 섹션 -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="badge">이강란 커뮤니티 리더</div>
-                
-                <h1>안녕하세요,<br><span class="highlight">이강란</span>입니다</h1>
-                
-                <p class="subtitle">Changshin / Exec. Advisor & Coach</p>
-                
-                <!-- 프로필 이미지 -->
-                <div class="profile-image-container">
-                    <img src="profile.jpg" alt="이강란 프로필 사진" class="profile-image">
-                </div>
-                
-                <p class="bio">
-                    33년 이상의 국제 HR 경력을 보유한 임원 어드바이저이자 코치입니다.
-                    <br>
-                    독일, 미국, 홍콩, 한국의 4개 글로벌 기업에서 일했으며, 
-                    11개 국가의 다양한 사람들과 협업하며 포용적이고 겸손한 리더십을 실천하고 있습니다.
-                </p>
-
-                <!-- 버튼 자리 (나중에 추가) -->
-                <div class="buttons-container">
-                    <!-- 버튼들이 여기 들어갈 예정 -->
-                </div>
             </div>
-        </section>
+        </nav>
 
-        <!-- 경력 섹션 -->
-        <section id="about" class="about">
-            <h2>경력 소개</h2>
-            <div class="career-timeline">
-                <div class="career-item">
-                    <h3>38년 글로벌 HR 경력</h3>
-                    <p>4개 글로벌 기업에서의 경험</p>
-                    <ul>
-                        <li>독일 (Chemical Industry)</li>
-                        <li>미국 (Medical Industry)</li>
-                        <li>홍콩 (Finance Industry)</li>
-                        <li>한국 (Food Industry)</li>
-                    </ul>
-                    <p class="description">현재 한국 기반 글로벌 제조업체(베트남, 중국, 인도네시아 진출)에서 11개 국가의 다양한 인력을 관리 및 협업 중입니다. 부산에 샘플 워크숍 보유.</p>
+        <!-- 메인 히어로 섹션 -->
+        <section class="hero" id="about">
+            <div class="hero-wrapper">
+                <!-- 좌측: 프로필 정보 -->
+                <div class="hero-left">
+                    <div class="badge-container">
+                        <span class="badge">🌐 글로벌 HR 리더</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        안녕하세요,<br>
+                        <span class="highlight">이강란</span>입니다
+                    </h1>
+                    
+                    <p class="hero-subtitle">Changshin / Exec. Advisor & Coach</p>
+                    
+                    <p class="hero-description">
+                        38년의 국제 HR 경력을 보유한 임원 어드바이저이자 코치입니다.
+                        <br><br>
+                        독일, 미국, 홍콩, 한국의 4개 글로벌 기업에서 근무했으며, 
+                        11개 국가의 다양한 인력을 관리하고 협업하며 포용적이고 겸손한 리더십을 실천하고 있습니다.
+                    </p>
+
+                    <!-- 역할/분야 태그 -->
+                    <div class="tags-container">
+                        <span class="tag">HR 리더십</span>
+                        <span class="tag">ESG</span>
+                        <span class="tag">코칭</span>
+                        <span class="tag">여성 리더</span>
+                        <span class="tag">조직 변혁</span>
+                        <span class="tag">제조업</span>
+                    </div>
+
+                    <!-- 액션 버튼 -->
+                    <div class="cta-buttons">
+                        <a href="todo.html" class="btn btn-primary">📝 To-Do List 앱</a>
+                        <a href="#contact" class="btn btn-secondary">📧 연락하기</a>
+                    </div>
                 </div>
 
-                <div class="career-item">
-                    <h3>사외이사 (iM Financial Group)</h3>
-                    <p>2025년 3월부터</p>
-                    <p class="description">HR/ESG 분야 담당. iM Financial Group은 2016년 설립되었으며, iM Bank는 한국에서 58년의 역사를 보유하고 있습니다.</p>
-                </div>
-
-                <div class="career-item">
-                    <h3>산업 경험</h3>
-                    <p>다양한 산업군에서의 경험</p>
-                    <ul>
-                        <li>화학 (Chemical)</li>
-                        <li>의료 (Medical)</li>
-                        <li>식품 (Food)</li>
-                        <li>금융 (Finance)</li>
-                        <li>제조 (Manufacturing)</li>
-                    </ul>
+                <!-- 우측: 프로필 사진 -->
+                <div class="hero-right">
+                    <div class="profile-circle">
+                        <img src="profile.jpg.jpeg" alt="이강란 프로필 사진" class="profile-image">
+                    </div>
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <span class="info-label">경력</span>
+                            <span class="info-value">38년</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">국가</span>
+                            <span class="info-value">11개</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">기업</span>
+                            <span class="info-value">4개</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- 전문성 섹션 -->
-        <section id="expertise" class="expertise">
-            <h2>전문성 & 자격</h2>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <h3>리더십 코칭</h3>
-                    <p>포용적이고 겸손한 리더십 스타일로 알려져 있습니다.</p>
-                    <ul>
-                        <li>Gallup CliftonStrengthfinder Coach</li>
-                        <li>PCC by ICF (International Coach Federation)</li>
-                    </ul>
-                </div>
+        <section class="expertise" id="expertise">
+            <div class="section-wrapper">
+                <h2>전문성 & 자격</h2>
+                
+                <div class="expertise-grid">
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🎯</div>
+                        <h3>리더십 코칭</h3>
+                        <ul>
+                            <li>Gallup CliftonStrengthfinder Coach</li>
+                            <li>PCC by ICF (International Coach Federation)</li>
+                        </ul>
+                    </div>
 
-                <div class="expertise-card">
-                    <h3>경영 자문</h3>
-                    <p>한국 정부 인정 경영 자문가</p>
-                    <ul>
-                        <li>Certified Management Consultant</li>
-                        <li>한국 정부 공인</li>
-                    </ul>
-                </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">📊</div>
+                        <h3>경영 자문</h3>
+                        <ul>
+                            <li>Certified Management Consultant</li>
+                            <li>한국 정부 공인</li>
+                        </ul>
+                    </div>
 
-                <div class="expertise-card">
-                    <h3>학력</h3>
-                    <ul>
-                        <li>고려대학교 - 영문학 전공</li>
-                        <li>서강대학교 - MBA</li>
-                    </ul>
-                </div>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🎓</div>
+                        <h3>학력</h3>
+                        <ul>
+                            <li>고려대학교 - 영문학 전공</li>
+                            <li>서강대학교 - MBA</li>
+                        </ul>
+                    </div>
 
-                <div class="expertise-card">
-                    <h3>네트워크</h3>
-                    <p>다양한 커뮤니티와 사회에서의 광범위한 네트워크</p>
-                    <ul>
-                        <li>여성 사회 네트워크</li>
-                        <li>HR 학회</li>
-                        <li>자원봉사 멘토 그룹 (전국)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 관심분야 & 취미 섹션 -->
-        <section id="interests" class="interests">
-            <h2>관심분야 & 취미</h2>
-            <div class="interests-container">
-                <div class="interest-category">
-                    <h3>📚 문화 & 예술</h3>
-                    <ul>
-                        <li>독서 및 글쓰기</li>
-                        <li>음악</li>
-                        <li>춤 및 드라마 (즉흥연기)</li>
-                        <li>미술 감상 (특히 Frida와 같은 드라마틱한 인생을 산 화가들)</li>
-                    </ul>
-                </div>
-
-                <div class="interest-category">
-                    <h3>💪 신체 활동</h3>
-                    <ul>
-                        <li>러닝</li>
-                        <li>워킹</li>
-                        <li>서핑</li>
-                        <li>복싱</li>
-                        <li>다양한 피지컬 활동 (나이대별 맞춤형)</li>
-                    </ul>
-                </div>
-
-                <div class="interest-category">
-                    <h3>🚀 혁신 & 변화</h3>
-                    <ul>
-                        <li>새로운 것에 대한 관심</li>
-                        <li>혁신 및 변화 추구</li>
-                        <li>조직 변혁</li>
-                    </ul>
-                </div>
-
-                <div class="interest-category">
-                    <h3>🤝 사람 성장 지원</h3>
-                    <ul>
-                        <li>사회 진출을 준비하는 청년 지원</li>
-                        <li>여성 리더 육성</li>
-                        <li>의미 있는 소명 찾기 지원</li>
-                        <li>더 나은 세상을 위한 협력</li>
-                    </ul>
+                    <div class="expertise-card">
+                        <div class="expertise-icon">🌐</div>
+                        <h3>네트워크</h3>
+                        <ul>
+                            <li>여성 사회 네트워크</li>
+                            <li>HR 학회</li>
+                            <li>자원봉사 멘토 그룹</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 풋터 -->
+        <!-- 경력 섹션 -->
+        <section class="career" id="career">
+            <div class="section-wrapper">
+                <h2>경력 소개</h2>
+                
+                <div class="career-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>사외이사 (iM Financial Group)</h3>
+                            <p class="timeline-date">2025년 3월~현재</p>
+                            <p class="timeline-desc">
+                                HR/ESG 분야 담당. iM Financial Group은 2016년 설립되었으며, 
+                                iM Bank는 한국에서 58년의 역사를 보유하고 있습니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>글로벌 제조업 인사관리</h3>
+                            <p class="timeline-date">현재 진행 중</p>
+                            <p class="timeline-desc">
+                                한국 기반 글로벌 제조업체(베트남, 중국, 인도네시아 진출)에서 
+                                11개 국가의 다양한 인력을 관리 및 협업 중입니다. 부산에 샘플 워크숍 보유.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>4개 글로벌 기업 경력</h3>
+                            <p class="timeline-date">38년 누적</p>
+                            <div class="industry-list">
+                                <span class="industry">🧪 화학 (독일)</span>
+                                <span class="industry">⚕️ 의료 (미국)</span>
+                                <span class="industry">💰 금융 (홍콩)</span>
+                                <span class="industry">🍽️ 식품 (한국)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 관심 분야 섹션 -->
+        <section class="interests">
+            <div class="section-wrapper">
+                <h2>관심분야 & 꿈</h2>
+                
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <div class="interest-icon">📚</div>
+                        <h3>문화 & 예술</h3>
+                        <p>독서, 글쓰기, 음악, 드라마(즉흥연기), 미술 감상 - 특히 삶의 드라마를 그린 화가들을 사랑합니다.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-icon">💪</div>
+                        <h3>신체 활동</h3>
+                        <p>러닝, 워킹, 서핑, 복싱 등 나이에 맞는 신체 활동을 꾸준히 즐기고 있습니다.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-icon">🚀</div>
+                        <h3>혁신 & 변화</h3>
+                        <p>새로운 것에 대한 관심과 혁신, 조직 변혁을 추구하며 계속 성장하고 있습니다.</p>
+                    </div>
+
+                    <div class="interest-card">
+                        <div class="interest-icon">🤝</div>
+                        <h3>사람 성장 지원</h3>
+                        <p>사회 진출을 준비하는 청년, 여성 리더 육성, 의미 있는 소명 찾기를 돕고 더 나은 세상을 만들고 싶습니다.</p>
+                    </div>
+                </div>
+
+                <div class="dream-box">
+                    <h3>🌟 2-3년 후의 꿈</h3>
+                    <p>62세 현재, 더 자유롭고 창의적인 제2의 커리어를 꿈꾸고 있습니다.</p>
+                    <p style="margin-top: 15px; font-weight: 600; color: #667eea;">
+                        📖 몇 천 권의 책과 함께 북카페 오픈을 생각하고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 연락 섹션 -->
+        <section class="contact" id="contact">
+            <div class="section-wrapper">
+                <h2>연락하기</h2>
+                
+                <div class="contact-content">
+                    <p class="contact-intro">
+                        당신의 의견, 제안, 협업 제안을 환영합니다.<br>
+                        함께 더 나은 세상을 만들어가고 싶습니다.
+                    </p>
+                    
+                    <div class="contact-info">
+                        <div class="info-box">
+                            <span class="icon">📧</span>
+                            <span class="text">orchid0813@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <p class="contact-note">
+                        이 웹사이트를 계속 발전시켜 나갈 예정입니다.<br>
+                        당신의 피드백과 제안을 기다리고 있습니다! 😊
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 푸터 -->
         <footer class="footer">
             <p>&copy; 2025 이강란. All rights reserved.</p>
+            <p>Made with ❤️ for a better world</p>
         </footer>
     </div>
 </body>

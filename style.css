@@ -1,4 +1,4 @@
-/* 기본 스타일 */
+/* ==================== 기본 스타일 ==================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,42 +6,59 @@
 }
 
 :root {
-    --primary-color: #4a90e2;
-    --secondary-color: #50c878;
-    --text-dark: #333333;
-    --text-light: #666666;
-    --background: #f8f9fa;
+    --turquoise: #17a2b8;
+    --cobalt: #0d47a1;
+    --cobalt-dark: #0a3d91;
     --white: #ffffff;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --light-bg: #f0f8fa;
+    --text-dark: #1a1a1a;
+    --text-light: #4a4a4a;
+    --shadow: 0 2px 12px rgba(13, 71, 161, 0.08);
+    --shadow-lg: 0 8px 24px rgba(13, 71, 161, 0.12);
+    --border-color: #d0e8f2;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--background);
+    background-color: var(--light-bg);
 }
 
-.container {
-    max-width: 1200px;
+.main-container {
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* 헤더 & 네비게이션 */
-header.header {
-    background-color: var(--white);
-    padding: 1rem 0;
+/* ==================== 네비게이션 ==================== */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow);
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow);
+    z-index: 1000;
+    border-bottom: 3px solid var(--turquoise);
 }
 
-.navbar {
+.nav-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cobalt);
+    text-decoration: none;
 }
 
 .nav-menu {
@@ -54,236 +71,256 @@ header.header {
     text-decoration: none;
     color: var(--text-dark);
     font-weight: 500;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: var(--primary-color);
+    color: var(--turquoise);
 }
 
-/* 히어로 섹션 */
+/* ==================== 히어로 섹션 ==================== */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: var(--white);
-    padding: 60px 0;
-    text-align: center;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #e6f7fb 100%);
 }
 
-.hero-content {
-    display: flex;
-    flex-direction: column;
+.hero-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
-    gap: 2rem;
+}
+
+.badge-container {
+    margin-bottom: 20px;
 }
 
 .badge {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: #e0f7fa;
+    color: var(--turquoise);
     padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    backdrop-filter: blur(10px);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--turquoise);
 }
 
-.hero h1 {
-    font-size: 3rem;
+.hero-title {
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin: 1rem 0;
+    margin-bottom: 10px;
+    color: var(--text-dark);
 }
 
-.hero h1 .highlight {
-    color: #ffd700;
-    display: inline-block;
+.hero-title .highlight {
+    color: var(--cobalt);
+    font-weight: 800;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    font-weight: 500;
-    opacity: 0.9;
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--turquoise);
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.bio {
-    font-size: 1.1rem;
-    max-width: 600px;
+.hero-description {
+    font-size: 1rem;
     line-height: 1.8;
-    opacity: 0.95;
-    margin: 1rem 0;
+    color: var(--text-light);
+    margin-bottom: 30px;
 }
 
-/* 프로필 이미지 */
-.profile-image-container {
+/* 태그 */
+.tags-container {
     display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-}
-
-.profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-image:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
-}
-
-/* 버튼 컨테이너 */
-.buttons-container {
-    display: flex;
-    gap: 1rem;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 2rem;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background: var(--white);
+    color: var(--cobalt);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1.5px solid var(--turquoise);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: var(--turquoise);
+    color: var(--white);
+    border-color: var(--turquoise);
+    transform: translateY(-2px);
+}
+
+/* CTA 버튼 */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
 }
 
 .btn {
-    padding: 12px 28px;
-    border: none;
+    padding: 14px 28px;
     border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
     display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: none;
 }
 
 .btn-primary {
-    background-color: var(--white);
-    color: #667eea;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--turquoise) 0%, var(--cobalt) 100%);
+    color: var(--white);
     box-shadow: var(--shadow-lg);
 }
 
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(13, 71, 161, 0.4);
+}
+
 .btn-secondary {
-    background-color: transparent;
-    color: var(--white);
-    border: 2px solid var(--white);
+    background: var(--white);
+    color: var(--cobalt);
+    border: 2px solid var(--cobalt);
 }
 
 .btn-secondary:hover {
-    background-color: var(--white);
-    color: #667eea;
+    background: var(--cobalt);
+    color: var(--white);
+    transform: translateY(-3px);
 }
 
-/* 섹션 기본 스타일 */
+/* 프로필 섹션 */
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-circle {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid var(--white);
+    box-shadow: 0 16px 48px rgba(13, 71, 161, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-circle:hover .profile-image {
+    transform: scale(1.02);
+    box-shadow: 0 20px 60px rgba(13, 71, 161, 0.3);
+}
+
+/* 프로필 정보 */
+.profile-info {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.info-item {
+    flex: 1;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-top: 3px solid var(--turquoise);
+}
+
+.info-label {
+    display: block;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.info-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cobalt);
+}
+
+/* ==================== 섹션 공통 스타일 ==================== */
 section {
-    padding: 60px 0;
+    padding: 80px 40px;
+}
+
+.section-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 section h2 {
     font-size: 2.5rem;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 3rem;
-    color: var(--text-dark);
+    margin-bottom: 50px;
+    color: var(--cobalt);
 }
 
-/* 경력 섹션 */
-.about {
-    background-color: var(--white);
-}
-
-.career-timeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.career-item {
-    padding: 2rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.career-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-.career-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-}
-
-.career-item p {
-    color: var(--text-light);
-    margin-bottom: 1rem;
-}
-
-.description {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: var(--text-dark);
-}
-
-.career-item ul {
-    list-style: none;
-    margin: 1rem 0;
-}
-
-.career-item li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    color: var(--text-dark);
-}
-
-.career-item li:before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-/* 전문성 섹션 */
+/* ==================== 전문성 섹션 ==================== */
 .expertise {
-    background-color: var(--background);
+    background: var(--white);
 }
 
 .expertise-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .expertise-card {
-    background: var(--white);
-    padding: 2rem;
+    background: linear-gradient(135deg, var(--white) 0%, #f0f8fa 100%);
+    padding: 30px;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    border-left: 4px solid var(--primary-color);
     transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
 .expertise-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--turquoise);
+    background: linear-gradient(135deg, #e6f7fb 0%, #f0f8fa 100%);
+}
+
+.expertise-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 .expertise-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
     font-size: 1.2rem;
-}
-
-.expertise-card p {
-    color: var(--text-light);
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: var(--cobalt);
+    font-weight: 700;
 }
 
 .expertise-card ul {
@@ -291,10 +328,10 @@ section h2 {
 }
 
 .expertise-card li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
+    padding: 8px 0;
+    padding-left: 20px;
     position: relative;
-    color: var(--text-dark);
+    color: var(--text-light);
     font-size: 0.95rem;
 }
 
@@ -302,81 +339,239 @@ section h2 {
     content: "✓";
     position: absolute;
     left: 0;
-    color: var(--secondary-color);
+    color: var(--turquoise);
     font-weight: bold;
 }
 
-/* 관심분야 섹션 */
-.interests {
-    background-color: var(--white);
+/* ==================== 경력 섹션 ==================== */
+.career {
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
 }
 
-.interests-container {
+.career-timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline-item {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 60px 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    position: relative;
 }
 
-.interest-category {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: var(--white);
-    padding: 2rem;
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background: var(--turquoise);
+    border-radius: 50%;
+    margin-top: 5px;
+    position: relative;
+    box-shadow: 0 0 0 4px rgba(23, 162, 184, 0.2);
+}
+
+.timeline-dot::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: var(--turquoise);
+    left: 7px;
+    top: 20px;
+}
+
+.timeline-item:last-child .timeline-dot::after {
+    display: none;
+}
+
+.timeline-content {
+    background: var(--white);
+    padding: 25px;
     border-radius: 12px;
     box-shadow: var(--shadow);
+    border-left: 4px solid var(--turquoise);
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--cobalt);
+    font-weight: 700;
+}
+
+.timeline-date {
+    color: var(--turquoise);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.timeline-desc {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.industry-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.industry {
+    background: #e6f7fb;
+    color: var(--cobalt);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ==================== 관심분야 섹션 ==================== */
+.interests {
+    background: var(--white);
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.interest-card {
+    background: linear-gradient(135deg, var(--turquoise) 0%, var(--cobalt) 100%);
+    color: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
     transition: all 0.3s ease;
 }
 
-.interest-category:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+.interest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(13, 71, 161, 0.3);
 }
 
-.interest-category h3 {
+.interest-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.interest-card h3 {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.interest-card p {
+    line-height: 1.7;
+    opacity: 0.95;
+    font-size: 0.95rem;
+}
+
+.dream-box {
+    background: linear-gradient(135deg, #b3e5fc 0%, #81d4fa 100%);
+    color: var(--cobalt);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    border: 2px solid var(--turquoise);
+}
+
+.dream-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.dream-box p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ==================== 연락 섹션 ==================== */
+.contact {
+    background: linear-gradient(135deg, #ffffff 0%, #e6f7fb 100%);
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-info {
+    margin: 30px 0;
+}
+
+.info-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    font-size: 1.1rem;
+    border: 2px solid var(--turquoise);
+}
+
+.info-box .icon {
+    font-size: 1.5rem;
+}
+
+.info-box .text {
+    color: var(--cobalt);
     font-weight: 600;
 }
 
-.interest-category ul {
-    list-style: none;
-}
-
-.interest-category li {
-    padding: 0.7rem 0;
-    padding-left: 1.5rem;
-    position: relative;
+.contact-note {
+    color: var(--text-light);
+    margin-top: 30px;
     font-size: 0.95rem;
-    opacity: 0.95;
+    line-height: 1.7;
 }
 
-.interest-category li:before {
-    content: "●";
-    position: absolute;
-    left: 0;
-    font-size: 0.8rem;
-}
-
-/* 풋터 */
+/* ==================== 푸터 ==================== */
 .footer {
-    background-color: var(--text-dark);
+    background: var(--cobalt);
     color: var(--white);
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
+    padding: 30px 40px;
+    border-top: 3px solid var(--turquoise);
 }
 
 .footer p {
-    opacity: 0.8;
+    margin: 8px 0;
+    opacity: 0.9;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+/* ==================== 반응형 디자인 ==================== */
+@media (max-width: 1024px) {
+    .hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .subtitle {
-        font-size: 1.2rem;
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .profile-circle {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        padding: 0 20px;
     }
 
     .nav-menu {
@@ -384,61 +579,146 @@ section h2 {
     }
 
     .nav-menu a {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 50px 20px;
     }
 
     section h2 {
         font-size: 1.8rem;
-        margin-bottom: 2rem;
+        margin-bottom: 30px;
     }
 
-    section {
-        padding: 40px 0;
+    .hero {
+        padding: 40px 20px;
     }
 
-    .career-timeline,
-    .expertise-grid,
-    .interests-container {
-        gap: 1.5rem;
+    .hero-title {
+        font-size: 1.8rem;
     }
 
-    .profile-image {
-        width: 150px;
-        height: 150px;
+    .hero-subtitle {
+        font-size: 1rem;
     }
 
-    .buttons-container {
+    .cta-buttons {
         flex-direction: column;
-        align-items: center;
     }
 
     .btn {
         width: 100%;
-        max-width: 300px;
+    }
+
+    .profile-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile-info {
+        flex-wrap: wrap;
+    }
+
+    .expertise-grid,
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+    }
+
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-dot::after {
+        height: 100px;
+        left: 5px;
+    }
+
+    .timeline-content {
+        padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem;
+    .nav-content {
+        padding: 0 15px;
+        height: 60px;
     }
 
-    .hero {
-        padding: 40px 0;
+    .logo {
+        font-size: 1.2rem;
     }
 
     .nav-menu {
-        flex-direction: column;
         gap: 0.5rem;
-        text-align: center;
+    }
+
+    .nav-menu a {
+        font-size: 0.75rem;
+    }
+
+    section {
+        padding: 30px 15px;
     }
 
     section h2 {
         font-size: 1.5rem;
     }
 
-    .profile-image {
-        width: 120px;
-        height: 120px;
+    .hero-title {
+        font-size: 1.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .tags-container {
+        gap: 8px;
+    }
+
+    .tag {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    .profile-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-info {
+        gap: 10px;
+    }
+
+    .info-item {
+        padding: 12px;
+    }
+
+    .info-value {
+        font-size: 1.3rem;
+    }
+
+    .interest-card,
+    .dream-box {
+        padding: 20px;
+    }
+
+    .interest-icon {
+        font-size: 2rem;
+    }
+
+    .interest-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .interest-card p {
+        font-size: 0.9rem;
     }
 }

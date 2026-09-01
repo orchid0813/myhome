@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - Local Storage</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <!-- 헤더 -->
+            <header class="todo-header">
+                <h1>✓ My To-Do List</h1>
+                <p>Local Storage에 저장되는 할일 관리 앱</p>
+            </header>
+
+            <!-- 입력 섹션 -->
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="새로운 할일을 입력하세요..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="add-btn">추가</button>
+            </div>
+
+            <!-- 필터 버튼 -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="active">진행 중</button>
+                <button class="filter-btn" data-filter="completed">완료됨</button>
+            </div>
+
+            <!-- 통계 정보 -->
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">전체:</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">완료:</span>
+                    <span class="stat-value" id="completedCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">진행 중:</span>
+                    <span class="stat-value" id="activeCount">0</span>
+                </div>
+            </div>
+
+            <!-- 할일 리스트 -->
+            <div class="todo-list" id="todoList">
+                <!-- 할일들이 여기에 들어갈 예정 -->
+            </div>
+
+            <!-- 빈 상태 메시지 -->
+            <div class="empty-state" id="emptyState">
+                <p>🎯 아직 할일이 없습니다.</p>
+                <p>위의 입력창에서 새로운 할일을 추가해보세요!</p>
+            </div>
+
+            <!-- 삭제 버튼 -->
+            <div class="action-buttons">
+                <button id="clearCompleted" class="clear-btn">완료된 항목 삭제</button>
+                <button id="deleteAll" class="delete-all-btn">모두 삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>

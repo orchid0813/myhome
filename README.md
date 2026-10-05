@@ -36,14 +36,14 @@ myhome/
 
 - **38년** 글로벌 HR 경력
 - **4개** 국가 (독일, 미국, 홍콩, 한국)에서 근무
-- **11개** 국가의 다양한 인력 관리 및 협업
+- **11개** 국가의 다양한 인재 관리 및 협업
 - **2025년 3월**부터 iM Financial Group 사외이사
 
 ### 🎯 전문성
 
 - Gallup CliftonStrengthfinder Coach
 - PCC by ICF (International Coach Federation)
-- Certified Management Consultant (한국 정부 공인)
+- Certified Management Consultant (경영지도사)
 - 고려대학교 영문학 / 서강대학교 MBA
 
 ### 📧 연락처
@@ -52,4 +52,4 @@ myhome/
 
 ---
 
-**© 2025 이강란. All rights reserved.**
+**© 2026 이강란. All rights reserved.**
